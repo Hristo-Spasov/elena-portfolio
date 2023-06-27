@@ -1,0 +1,25 @@
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: 0px;
+  min-width: 100%;
+  height: 100vh;
+  background-color: var(--beige);
+  /* background: url("../assets/paintings/hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 30%; */
+}
+
+.hero img {
+  width: 500px;
+  height: 100%;
+}
+
+.hero h2 {
+  position: absolute;
+  display: flex;
+  margin: 0;
+  left: 10%;
+  top: 50%;
+}
