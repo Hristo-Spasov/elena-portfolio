@@ -1,5 +1,5 @@
 import classes from "./Home.module.css";
-import hero from "../assets/paintings/hero.jpg";
+import hero from "../assets/hero-min.png";
 
 const Home = () => {
   return (

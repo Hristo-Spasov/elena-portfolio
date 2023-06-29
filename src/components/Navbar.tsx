@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <>
+    <div className={classes.nav__container}>
       <nav className={classes.nav}>
         <ul className={classes.nav_list}>
           {/* Logo */}
@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 

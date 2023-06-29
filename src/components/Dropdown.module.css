@@ -1,5 +1,7 @@
 .dropdown {
+  border: 1px solid black;
   overflow: hidden;
   position: relative;
   text-align: center;
+  z-index: 100;
 }
