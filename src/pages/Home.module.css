@@ -1,3 +1,7 @@
+.home {
+  width: 100%;
+}
+
 .hero {
   display: flex;
   justify-content: flex-end;
@@ -25,4 +29,13 @@
   font-family: "Tenor Sans", sans-serif;
   font-size: 100px;
   color: white;
+}
+
+.about__wrapper {
+  display: flex;
+  background-color: white;
+  padding: 40px 0 40px 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

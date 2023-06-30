@@ -1,0 +1,38 @@
+.about__container {
+  background-color: var(--teal);
+  padding: 40px;
+  flex: 1;
+  max-width: 90%;
+}
+
+.about_me {
+  border: 2px solid white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 78vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about_me h3 {
+  font-size: 53px;
+  font-weight: bold;
+}
+
+.about_me hr {
+  width: 5%;
+  color: white;
+  padding: 1.3px;
+  background-color: white;
+  border-radius: 10px;
+}
+.about_me p {
+  width: 90%;
+  font-size: 33px;
+  font-weight: 100;
+  word-wrap: break-word;
+}
