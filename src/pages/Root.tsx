@@ -4,11 +4,11 @@ import Contacts from "../components/Contacts";
 
 const Root = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Outlet />
       <Contacts />
-    </div>
+    </>
   );
 };
 
