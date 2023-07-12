@@ -5,18 +5,13 @@ interface CardProps {
   title: string;
   description: string;
   image: string;
-  isEven: boolean;
+  isOdd: boolean;
 }
 
-const Card = ({
-  title,
-  isEven,
-  description,
-  image,
-}: CardProps): JSX.Element => {
+const Card = ({ title, isOdd, description, image }: CardProps): JSX.Element => {
   return (
     <div className={classes.collections__container}>
-      {!isEven ? (
+      {isOdd ? (
         <div className={classes.card_container}>
           <img src={image} alt={title} />
           <div className={classes.collection_information_wrapper}>
