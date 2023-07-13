@@ -1,16 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-scroll";
 import classes from "./Navbar.module.css";
 import logo from "../assets/logo.svg";
 import arrowdown from "../assets/arrow-down.svg";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const { pathname } = useLocation();
 
   return (
     <div className={classes.nav__container}>
-      <nav className={classes.nav}>
+      <nav className={pathname !== "/" ? classes.nav__teal : classes.nav}>
         <ul className={classes.nav_list}>
           {/* Logo */}
           <div>
@@ -45,7 +47,9 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <NavLink to="/">Contacts</NavLink>
+              <Link to="contacts" smooth={true} duration={300}>
+                Contacts
+              </Link>
             </li>
           </div>
         </ul>

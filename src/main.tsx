@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root";
 import Home from "./pages/Home";
+import Collection from "./pages/Collection";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "collection/:Id",
+        element: <Collection />,
       },
     ],
   },

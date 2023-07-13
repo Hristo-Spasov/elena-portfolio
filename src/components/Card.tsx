@@ -1,5 +1,5 @@
 import classes from "./Card.module.css";
-import Button from "./Button";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   title: string;
@@ -13,6 +13,25 @@ const Card = ({ title, isOdd, description, image }: CardProps): JSX.Element => {
     <div className={classes.collections__container}>
       {isOdd ? (
         <div className={classes.card_container}>
+          <div className={classes.collection_information_wrapper_inverted}>
+            <div className={classes.collection_information_inverted}>
+              <div className={classes.inner__information_inverted}>
+                <h2>{title}</h2>
+                <hr />
+                <p>{description}</p>
+                <Link
+                  to={`collection/${title}`}
+                  className={classes.inverted_button}
+                >
+                  See more
+                </Link>
+              </div>
+            </div>
+          </div>
+          <img src={image} alt={title} />
+        </div>
+      ) : (
+        <div className={classes.card_container}>
           <img src={image} alt={title} />
           <div className={classes.collection_information_wrapper}>
             <div className={classes.collection_information}>
@@ -20,24 +39,15 @@ const Card = ({ title, isOdd, description, image }: CardProps): JSX.Element => {
                 <h2>{title}</h2>
                 <hr />
                 <p>{description}</p>
-                <Button>SEE MORE</Button>
+                <Link
+                  className={classes.base_button}
+                  to={`collection/${title}`}
+                >
+                  SEE MORE
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={classes.card_container}>
-          <div className={classes.collection_information_wrapper_inverted}>
-            <div className={classes.collection_information_inverted}>
-              <div className={classes.inner__information_inverted}>
-                <h2>{title}</h2>
-                <hr />
-                <p>{description}</p>
-                <Button className={classes.inverted_button}>See more</Button>
-              </div>
-            </div>
-          </div>
-          <img src={image} alt={title} />
         </div>
       )}
     </div>

@@ -3,14 +3,28 @@ import David from "../assets/paintings/david.jpg";
 import BlueEye from "../assets/paintings/blue_eye.jpg";
 import Cats from "../assets/portfolio/cats.jpg";
 
-interface Collection {
+interface Collections {
   id: number;
   title: string;
   description: string;
   image: string;
 }
 
-export const collections: Collection[] = [
+interface Collection {
+  id: number;
+  title: string;
+  description: string;
+  paintings: Painting[];
+}
+
+interface Painting {
+  id: number;
+  image: string;
+  title: string;
+  size?: string;
+}
+
+export const collections: Collections[] = [
   {
     id: 1,
     title: "Non Finito",
@@ -34,5 +48,21 @@ export const collections: Collection[] = [
     title: "Portfolio",
     description: `This is a small part of my artworks and orders i have done through the years.`,
     image: Cats,
+  },
+];
+
+export const collection: Collection[] = [
+  {
+    id: 1,
+    title: "Non Finito",
+    description: "ldsdsadadsadsasa",
+    paintings: [
+      {
+        id: 1,
+        title: "Non Finito",
+        image: NonFinito,
+        size: "100x80cm",
+      },
+    ],
   },
 ];

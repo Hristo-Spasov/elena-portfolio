@@ -6,16 +6,16 @@ const Dropdown = () => {
     <>
       <ul className={classes.dropdown}>
         <li>
-          <NavLink to="/">Non Finito</NavLink>
+          <NavLink to="collection/:Non Finito">Non Finito</NavLink>
         </li>
         <li>
-          <NavLink to="/">30x24</NavLink>
+          <NavLink to="collection/:30x24">30x24</NavLink>
         </li>
         <li>
-          <NavLink to="/">Other</NavLink>
+          <NavLink to="collection/:Other">Other</NavLink>
         </li>
         <li>
-          <NavLink to="/">Portfolio</NavLink>
+          <NavLink to="collection/:Portfolio">Portfolio</NavLink>
         </li>
       </ul>
     </>
