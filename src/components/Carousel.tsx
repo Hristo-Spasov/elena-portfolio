@@ -1,66 +1,45 @@
-import { useState } from "react";
-import ReactSimplyCarousel from "react-simply-carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Paintings from "./Paintings";
+import { Collection } from "../constants";
 
 type CarouselProps = {
-  children?: React.ReactNode;
+  onSelectedItem: Collection;
 };
 
-const Carousel = ({ children }: CarouselProps): JSX.Element => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+const Carousel = ({ onSelectedItem }: CarouselProps): JSX.Element => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <>
-      <ReactSimplyCarousel
-        activeSlideIndex={activeSlideIndex}
-        onRequestChange={setActiveSlideIndex}
-        itemsToShow={1}
-        itemsToScroll={1}
-        forwardBtnProps={{
-          //here you can also pass className, or any other button element attributes
-          style: {
-            alignSelf: "center",
-            background: "black",
-            border: "none",
-            borderRadius: "50%",
-            color: "white",
-            cursor: "pointer",
-            fontSize: "20px",
-            height: 30,
-            lineHeight: 1,
-            textAlign: "center",
-            width: 30,
-          },
-          children: <span>{`>`}</span>,
-        }}
-        backwardBtnProps={{
-          //here you can also pass className, or any other button element attributes
-          style: {
-            alignSelf: "center",
-            background: "black",
-            border: "none",
-            borderRadius: "50%",
-            color: "white",
-            cursor: "pointer",
-            fontSize: "20px",
-            height: 30,
-            lineHeight: 1,
-            textAlign: "center",
-            width: 30,
-          },
-          children: <span>{`<`}</span>,
-        }}
-        responsiveProps={[
-          {
-            itemsToShow: 1,
-            itemsToScroll: 1,
-            minWidth: 768,
-          },
-        ]}
-        speed={400}
-        easing="linear"
-      >
-        {children}
-      </ReactSimplyCarousel>
-    </>
+    <Slider {...settings}>
+      {onSelectedItem.paintings.map(({ title, image, size }) => (
+        <Paintings title={title} image={image} size={size} />
+      ))}
+    </Slider>
   );
 };
 

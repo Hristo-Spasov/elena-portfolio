@@ -1,5 +1,5 @@
 import classes from "./Home.module.css";
-import hero from "../assets/hero-min.png";
+import hero from "../assets/hero-min.webp";
 import About from "../components/About";
 import Collections from "../components/Collections";
 

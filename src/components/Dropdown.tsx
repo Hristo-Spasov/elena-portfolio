@@ -1,23 +1,17 @@
 import { NavLink } from "react-router-dom";
 import classes from "./Dropdown.module.css";
+import { collection } from "../constants";
 
 const Dropdown = () => {
   return (
     <>
-      <ul className={classes.dropdown}>
-        <li>
-          <NavLink to="collection/:Non Finito">Non Finito</NavLink>
-        </li>
-        <li>
-          <NavLink to="collection/:30x24">30x24</NavLink>
-        </li>
-        <li>
-          <NavLink to="collection/:Other">Other</NavLink>
-        </li>
-        <li>
-          <NavLink to="collection/:Portfolio">Portfolio</NavLink>
-        </li>
-      </ul>
+      {collection.map(({ title, id }) => (
+        <ul key={id} className={classes.dropdown}>
+          <li>
+            <NavLink to={`collection/${title}`}>{title}</NavLink>
+          </li>
+        </ul>
+      ))}
     </>
   );
 };
