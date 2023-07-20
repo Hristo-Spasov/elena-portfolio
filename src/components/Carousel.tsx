@@ -16,6 +16,10 @@ const Carousel = ({ onSelectedItem }: CarouselProps): JSX.Element => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    pauseOnHover: true,
+    focusOnSelect: true,
+    arrows: false,
+    draggable: true,
     responsive: [
       {
         breakpoint: 768,

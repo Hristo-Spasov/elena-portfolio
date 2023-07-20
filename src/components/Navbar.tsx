@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import classes from "./Navbar.module.css";
 import logo from "../assets/logo.svg";
-import arrowdown from "../assets/arrow-down.svg";
 import Dropdown from "./Dropdown";
+import { ReactComponent as ArrowDown } from "../assets/arrow-down.svg";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -16,25 +16,48 @@ const Navbar = () => {
         <ul className={classes.nav_list}>
           {/* Logo */}
           <div>
-            <NavLink to="/">
-              <img className={classes.logo} src={logo} />
-            </NavLink>
+            {pathname === "/" ? (
+              <Link to="/" smooth={true} duration={300} offset={0} spy={true}>
+                <img className={classes.logo} src={logo} />
+              </Link>
+            ) : (
+              <NavLink to="/">
+                <img className={classes.logo} src={logo} />
+              </NavLink>
+            )}
           </div>
+
           {/* Main nav */}
-          <div className={classes.main_nav}>
+          <div
+            className={
+              pathname !== "/" ? classes.main_nav_alt : classes.main_nav
+            }
+          >
             <li>
-              <NavLink to="/">Home</NavLink>
+              {pathname === "/" ? (
+                <Link
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={0}
+                >
+                  Home
+                </Link>
+              ) : (
+                <NavLink to="/">Home</NavLink>
+              )}
             </li>
             <li>
               <span onClick={() => setToggle(!toggle)}>
                 Collections{" "}
-                <img
-                  className={classes.arrowdown}
-                  src={arrowdown}
+                <ArrowDown
                   width={12}
                   height={12}
+                  className={classes.arrow_down}
                 />
               </span>
+
               {/* Dropdown */}
               <div
                 className={
@@ -47,7 +70,7 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link to="contacts" smooth={true} duration={300}>
+              <Link to="contacts" smooth={true} duration={500} spy={true}>
                 Contacts
               </Link>
             </li>

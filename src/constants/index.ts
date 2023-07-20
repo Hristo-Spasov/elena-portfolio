@@ -102,7 +102,7 @@ export const collection: Collection[] = [
         id: 2,
         title: "Sadness",
         image: Sadness,
-        size: "80x100cm",
+        size: "80x60cm",
       },
       {
         id: 3,
@@ -245,6 +245,7 @@ export const collection: Collection[] = [
       {
         id: 5,
         image: House,
+        size: "50x60cm",
       },
       {
         id: 6,

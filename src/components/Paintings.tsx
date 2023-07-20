@@ -11,8 +11,10 @@ const Paintings = ({ title, image, size }: PaintingsProps): JSX.Element => {
     <div className={classes.card__wrapper}>
       <div className={classes.card__container}>
         <img src={image} alt={title} />
-        {title && <h2>{title}</h2>}
-        {size && <p>{size}</p>}
+        <div className={classes.info__container}>
+          {title && <h2 className={classes.card__title}>{title}</h2>}
+          {size && <p className={classes.size}>{size}</p>}
+        </div>
       </div>
     </div>
   );

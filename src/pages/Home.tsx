@@ -5,7 +5,7 @@ import Collections from "../components/Collections";
 
 const Home = (): JSX.Element => {
   return (
-    <div className={classes.home}>
+    <div className={classes.home} id="home">
       <section className={classes.hero}>
         <img src={hero} alt="hero image" />
         <h2>ELLENA</h2>

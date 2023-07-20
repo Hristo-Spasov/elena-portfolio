@@ -24,14 +24,6 @@ const Collection = (): JSX.Element => {
           <div className={classes.carousel__wrapper}>
             <div className={classes.carousel__container}>
               <Carousel onSelectedItem={selectedItem} />
-              {/* {selectedItem.paintings.map(({ id, title, image, size }) => (
-                  <div key={id}>
-                    <h3>{title}</h3>
-                    <img src={image} alt={title} />
-                    {size && <p>{size}</p>}
-                  </div>
-                ))} */}
-              {/* <Paintings /> */}
             </div>
           </div>
         </div>
