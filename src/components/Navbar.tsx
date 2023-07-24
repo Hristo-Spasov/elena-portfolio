@@ -65,6 +65,7 @@ const Navbar = () => {
                     ? classes.dropdown_container
                     : classes.dropdown_container_hidden
                 }
+                onClick={() => setToggle(!toggle)}
               >
                 <Dropdown />
               </div>

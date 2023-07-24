@@ -53,6 +53,11 @@
 
 .dropdown_container {
   position: absolute;
+  border: 1px solid var(--teal);
+  background-color: white;
+  width: 150px;
+  height: auto;
+  z-index: 99;
 }
 
 .dropdown_container_hidden {
