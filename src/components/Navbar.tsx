@@ -1,21 +1,44 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import classes from "./Navbar.module.css";
 import logo from "../assets/logo.svg";
 import Dropdown from "./Dropdown";
 import { ReactComponent as ArrowDown } from "../assets/arrow-down.svg";
+import BurgerMenu from "./BurgerMenu";
 
 const Navbar = () => {
+  const navRef = useRef<HTMLDivElement>(null);
   const [toggle, setToggle] = useState(false);
   const { pathname } = useLocation();
 
+  // Closing the dropdown menu when we click anywhere on the page
+  useEffect(() => {
+    const clickHandler = (event: MouseEvent) => {
+      if (
+        toggle &&
+        navRef.current &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        setToggle(false);
+      }
+    };
+    document.addEventListener("mousedown", clickHandler);
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", clickHandler);
+    };
+  }, [toggle]);
+
   return (
     <div className={classes.nav__container}>
-      <nav className={pathname !== "/" ? classes.nav__teal : classes.nav}>
+      <nav
+        ref={navRef}
+        className={pathname !== "/" ? classes.nav__teal : classes.nav}
+      >
         <ul className={classes.nav_list}>
           {/* Logo */}
-          <div>
+          <div className={classes.logo_container}>
             {pathname === "/" ? (
               <Link to="/" smooth={true} duration={300} offset={0} spy={true}>
                 <img className={classes.logo} src={logo} />
@@ -49,7 +72,7 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <span onClick={() => setToggle(!toggle)}>
+              <span onClick={() => setToggle((prev) => !prev)}>
                 Collections{" "}
                 <ArrowDown
                   width={12}
@@ -65,7 +88,7 @@ const Navbar = () => {
                     ? classes.dropdown_container
                     : classes.dropdown_container_hidden
                 }
-                onClick={() => setToggle(!toggle)}
+                onClick={() => setToggle((prev) => !prev)}
               >
                 <Dropdown />
               </div>
@@ -75,6 +98,11 @@ const Navbar = () => {
                 Contacts
               </Link>
             </li>
+          </div>
+
+          {/* Burger menu for mobile view */}
+          <div className={classes.burder_menu}>
+            <BurgerMenu />
           </div>
         </ul>
       </nav>

@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .content__container h2 {
@@ -28,7 +29,8 @@
   border-radius: 10px;
 }
 
-.content__container p {
+.normal__text,
+.center__text {
   width: 100%;
   font-size: 24px;
   font-weight: 100;
@@ -44,4 +46,11 @@
 
 .carousel__container {
   padding: 20px;
+}
+
+/* settings for shorter descriptions */
+
+.center__text {
+  text-align: center;
+  inline-size: 70%;
 }

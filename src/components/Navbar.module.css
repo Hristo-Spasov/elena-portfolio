@@ -20,12 +20,22 @@
   justify-content: space-between;
   font-size: 24px;
 }
-.main_nav {
+
+.main_nav,
+.main_nav_alt {
   display: flex;
   gap: 20px;
-  margin-right: 40px;
+  margin-left: auto;
 }
-.main_nav span {
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main_nav span,
+.main_nav_alt span {
   font-size: 24px;
   margin: 0;
   color: white;
@@ -78,24 +88,6 @@
 
 /* Alternative styling */
 
-.main_nav_alt {
-  display: flex;
-  gap: 20px;
-  margin-right: 40px;
-}
-.main_nav_alt span {
-  font-size: 24px;
-  margin: 0;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.arrow_down {
-  fill: white;
-  stroke: white;
-}
-
 .main_nav_alt span:hover {
   color: var(--beige);
 }
@@ -107,4 +99,19 @@
 
 .main_nav_alt a:hover {
   color: var(--beige);
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px) {
+  .main_nav_alt,
+  .main_nav {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .burder_menu {
+    visibility: hidden;
+  }
 }
