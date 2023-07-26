@@ -16,11 +16,6 @@ font-family: 'Tenor Sans', sans-serif;  Hero text */
   background-color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   height: 100%;
   margin: 0;
@@ -39,4 +34,10 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
 }
