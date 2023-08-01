@@ -107,6 +107,8 @@
   .main_nav_alt,
   .main_nav {
     visibility: hidden;
+    margin: 0;
+    overflow: hidden;
   }
 }
 

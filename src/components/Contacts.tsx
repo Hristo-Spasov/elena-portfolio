@@ -48,7 +48,7 @@ const Contacts = (): JSX.Element => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <InstagramIcon /> https://www.instagram.com/ellena.artistry/
+              <InstagramIcon /> www.instagram.com/ellena.artistry
             </a>
             <a href="mailto:ellena.encheva@gmail.com">
               <MailOutlineIcon /> ellena.encheva@gmail.com
@@ -58,7 +58,7 @@ const Contacts = (): JSX.Element => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FacebookIcon /> https://www.facebook.com/elena.encheva.9
+              <FacebookIcon /> www.facebook.com/elena.encheva.9
             </a>
           </div>
         </div>

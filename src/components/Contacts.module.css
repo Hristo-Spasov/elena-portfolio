@@ -113,3 +113,116 @@
 .links__container__alt a {
   color: white;
 }
+
+/* Media Query */
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .contacts__container h2,
+  .contacts__container__alt h2 {
+    font-size: 50px;
+  }
+
+  .contacts__info__container,
+  .contacts__info__container__alt {
+    padding: 20px 0;
+  }
+
+  .links__container,
+  .links__container__alt {
+    margin: 0;
+  }
+
+  .links__container a,
+  .links__container__alt a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+/* Typical Mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .contacts__container,
+  .contacts__container__alt {
+    padding: 0 0 20px 0;
+    gap: 30px;
+  }
+
+  .contacts__container h2,
+  .contacts__container__alt h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .contacts__container hr,
+  .contacts__container__alt hr {
+    padding: 0;
+    width: 30px;
+  }
+
+  .contacts_inner__container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .contacts__info__wrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .contacts__info__container,
+  .contacts__info__container__alt {
+    width: 16rem;
+  }
+
+  .contacts__info__container p,
+  .contacts__info__container__alt p {
+    width: 90%;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .links__container__wrapper {
+    width: 100%;
+  }
+
+  .links__container,
+  .links__container__alt {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links__container a,
+  .links__container__alt a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+  }
+
+  .links__container a > svg,
+  .links__container__alt a > svg {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Landscape */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Small desktop */
+
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+}

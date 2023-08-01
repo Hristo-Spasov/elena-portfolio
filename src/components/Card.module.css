@@ -196,7 +196,7 @@
   .collection_information_wrapper,
   .collection_information_wrapper_inverted {
     width: 100%;
-    height: 450px;
+    height: auto;
   }
 
   .collection_information,
@@ -222,7 +222,8 @@
 
   .inner__information,
   .inner__information_inverted {
-    gap: 10px;
+    gap: 0;
+    justify-content: space-evenly;
   }
 
   .base_button,

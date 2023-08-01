@@ -38,9 +38,3 @@
   display: block;
   color: white;
 }
-
-@media screen and (max-width: 370px) {
-  .burger_nav {
-    right: 140px;
-  }
-}
