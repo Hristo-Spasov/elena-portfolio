@@ -68,6 +68,12 @@
   .hero h2 {
     font-size: 70px;
   }
+  .about__wrapper {
+    padding: 40px 0 0 0;
+  }
+  .collections__wrapper {
+    padding: 0 0 40px 0;
+  }
 }
 
 /* Typical Mobile */
@@ -86,6 +92,12 @@
     min-width: 100%;
     left: 0%;
   }
+  .about__wrapper {
+    padding: 40px 0 0 0;
+  }
+  .collections__wrapper {
+    padding: 0 0 40px 0;
+  }
 }
 
 /* Mobile Landscape */
@@ -101,6 +113,12 @@
     min-width: 50%;
     object-fit: contain;
   }
+  .about__wrapper {
+    padding: 40px 0 0 0;
+  }
+  .collections__wrapper {
+    padding: 0 0 40px 0;
+  }
 }
 
 /* Small desktop */
@@ -108,5 +126,11 @@
 @media only screen and (min-width: 980px) and (max-width: 1024px) {
   .hero h2 {
     font-size: 60px;
+  }
+  .about__wrapper {
+    padding: 40px 0 0 0;
+  }
+  .collections__wrapper {
+    padding: 0 0 40px 0;
   }
 }

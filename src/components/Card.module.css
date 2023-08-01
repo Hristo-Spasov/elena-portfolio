@@ -10,7 +10,8 @@
   width: 50%;
   object-fit: cover;
 }
-.collection_information_wrapper {
+.collection_information_wrapper,
+.collection_information_wrapper_inverted {
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -18,12 +19,14 @@
   align-items: center;
 }
 
-.collection_information {
+.collection_information,
+.collection_information_inverted {
   height: 100%;
   padding: 40px;
 }
 
-.inner__information {
+.inner__information,
+.inner__information_inverted {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,19 +36,22 @@
   border: 2px solid var(--teal);
 }
 
-.collection_information h2 {
+.collection_information h2,
+.collection_information_inverted h2 {
   color: var(--teal);
   font-size: 60px;
 }
 
-.collection_information hr {
+.collection_information hr,
+.collection_information_inverted hr {
   width: 50px;
   color: var(--teal);
   padding: 1px;
   background-color: var(--teal);
   border-radius: 10px;
 }
-.collection_information p {
+.collection_information p,
+.collection_information_inverted p {
   width: 90%;
   font-size: 33px;
   font-weight: 100;
@@ -53,7 +59,8 @@
   font-family: "Antic", sans-serif;
 }
 
-.base_button {
+.base_button,
+.inverted_button {
   margin-top: 40px;
   min-width: 200px;
   width: auto;
@@ -81,77 +88,204 @@
   background-color: var(--teal);
 }
 
-/* Inverted */
+/* Inverted styling */
 
 .collection_information_wrapper_inverted {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: var(--teal);
 }
 
-.collection_information_inverted {
-  height: 100%;
-  padding: 40px;
-}
-
 .inner__information_inverted {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
   border: 2px solid white;
 }
 
 .collection_information_inverted h2 {
   color: white;
-  font-size: 60px;
 }
 
 .collection_information_inverted hr {
-  width: 50px;
   color: white;
-  padding: 1px;
   background-color: white;
-  border-radius: 10px;
 }
 
 .collection_information_inverted p {
-  width: 90%;
-  font-size: 33px;
-  font-weight: 100;
-  word-wrap: break-word;
-  font-family: "Antic", sans-serif;
   color: white;
 }
 
 .inverted_button {
-  margin-top: 40px;
-  min-width: 200px;
-  width: auto;
-  height: 60px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
   background-color: var(--teal);
   color: white;
-  text-transform: uppercase;
-  font-family: "Baskervville", serif;
-  font-weight: bolder;
   border: 2px solid white;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  transition: all 0.5s ease;
 }
+
 .inverted_button:hover {
   background-color: white;
   color: var(--teal);
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .card_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .card_container img {
+    width: 100%;
+  }
+
+  .collection_information_wrapper,
+  .collection_information_wrapper_inverted {
+    width: 100%;
+    height: 500px;
+  }
+
+  .collection_information,
+  .collection_information_inverted {
+    padding: 20px;
+    border: 2px solid var(--teal);
+    width: 93.7%;
+  }
+
+  .collection_information h2,
+  .collection_information_inverted h2 {
+    font-size: 30px;
+  }
+
+  .collection_information p,
+  .collection_information_inverted p {
+    font-size: 24px;
+  }
+
+  .inner__information,
+  .inner__information_inverted {
+    gap: 20px;
+  }
+
+  .base_button,
+  .inverted_button {
+    margin-top: 0;
+    min-width: 200px;
+    height: 40px;
+    padding: 0 35px 0 35px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Typical Mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .card_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .card_container img {
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+  }
+
+  .collection_information_wrapper,
+  .collection_information_wrapper_inverted {
+    width: 100%;
+    height: 450px;
+  }
+
+  .collection_information,
+  .collection_information_inverted {
+    padding: 20px;
+    border: 2px solid var(--teal);
+  }
+
+  .collection_information h2,
+  .collection_information_inverted h2 {
+    font-size: 24px;
+  }
+
+  .collection_information hr,
+  .collection_information_inverted hr {
+    padding: 0;
+  }
+
+  .collection_information p,
+  .collection_information_inverted p {
+    font-size: 18px;
+  }
+
+  .inner__information,
+  .inner__information_inverted {
+    gap: 10px;
+  }
+
+  .base_button,
+  .inverted_button {
+    margin-top: 0;
+    min-width: 100px;
+    height: 40px;
+    padding: 0 35px 0 35px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Landscape */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .collection_information_wrapper,
+  .collection_information_wrapper_inverted {
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .collection_information,
+  .collection_information_inverted {
+    padding: 20px;
+    height: 20rem;
+  }
+
+  .collection_information h2,
+  .collection_information_inverted h2 {
+    font-size: 24px;
+  }
+
+  .collection_information p,
+  .collection_information_inverted p {
+    font-size: 18px;
+  }
+
+  .base_button,
+  .inverted_button {
+    margin-top: 0;
+    min-width: 100px;
+    height: 40px;
+    padding: 0 35px 0 35px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small desktop */
+
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .collection_information_wrapper,
+  .collection_information_wrapper_inverted {
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .collection_information h2,
+  .collection_information_inverted h2 {
+    font-size: 36px;
+  }
+
+  .collection_information p,
+  .collection_information_inverted p {
+    font-size: 24px;
+  }
 }

@@ -12,7 +12,7 @@ const Collections = (): JSX.Element => {
             title={collection.title}
             description={collection.description}
             image={collection.image}
-            isOdd={index % 2 === 1}
+            isEven={index % 2 === 0}
           />
         ))}
       </div>
