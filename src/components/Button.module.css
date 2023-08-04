@@ -1,0 +1,26 @@
+.base_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  width: auto;
+  height: 35px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: white;
+  color: var(--teal);
+  text-transform: uppercase;
+  font-family: "Baskervville", serif;
+  font-weight: bolder;
+  border: 1px solid var(--teal);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+
+.base_button:hover {
+  color: white;
+  background-color: var(--teal);
+}

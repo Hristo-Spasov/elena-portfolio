@@ -239,16 +239,21 @@
 /* Mobile Landscape */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .card_container img {
+    width: 50%;
+    object-fit: fill;
+    height: auto;
+  }
+
   .collection_information_wrapper,
   .collection_information_wrapper_inverted {
-    justify-content: unset;
-    align-items: unset;
+    width: 50%;
   }
 
   .collection_information,
   .collection_information_inverted {
     padding: 20px;
-    height: 20rem;
+    height: auto;
   }
 
   .collection_information h2,
@@ -256,9 +261,20 @@
     font-size: 24px;
   }
 
+  .collection_information hr,
+  .collection_information_inverted hr {
+    padding: 0;
+  }
+
   .collection_information p,
   .collection_information_inverted p {
     font-size: 18px;
+  }
+
+  .inner__information,
+  .inner__information_inverted {
+    gap: 0;
+    justify-content: space-evenly;
   }
 
   .base_button,
@@ -274,10 +290,25 @@
 /* Small desktop */
 
 @media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .card_container {
+    height: auto;
+  }
+
   .collection_information_wrapper,
   .collection_information_wrapper_inverted {
     justify-content: unset;
     align-items: unset;
+  }
+
+  .inner__information,
+  .inner__information_inverted {
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+  }
+
+  .collection_information,
+  .collection_information_inverted {
+    padding: 50px;
   }
 
   .collection_information h2,
@@ -288,5 +319,10 @@
   .collection_information p,
   .collection_information_inverted p {
     font-size: 24px;
+  }
+
+  .base_button,
+  .inverted_button {
+    margin-top: 0;
   }
 }

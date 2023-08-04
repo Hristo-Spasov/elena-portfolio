@@ -24,7 +24,7 @@ const Carousel = ({ onSelectedItem }: CarouselProps): JSX.Element => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -40,8 +40,8 @@ const Carousel = ({ onSelectedItem }: CarouselProps): JSX.Element => {
 
   return (
     <Slider {...settings}>
-      {onSelectedItem.paintings.map(({ title, image, size }) => (
-        <Paintings title={title} image={image} size={size} />
+      {onSelectedItem.paintings.map(({ title, image, size, id }) => (
+        <Paintings key={id} title={title} image={image} size={size} />
       ))}
     </Slider>
   );

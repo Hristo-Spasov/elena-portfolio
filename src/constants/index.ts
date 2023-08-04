@@ -42,7 +42,7 @@ interface Collections {
 export interface Collection {
   id: number;
   title: string;
-  description: string;
+  description: string[];
   paintings: Painting[];
 }
 
@@ -84,12 +84,20 @@ export const collection: Collection[] = [
   {
     id: 1,
     title: "Non Finito",
-    description: `In this art project, I represent the human body in various bright colors. My initial inspiration came from colors - clean and bright, intertwining with each other and creating a colorful, patterned swirl that tries to form a shape, an image or even an emotion. I was determined to use this love of color to create my artworks.
-   I decided this project to be about the upper part of the human body. I wanted to portray the beautiful facial features, captivating eyes that can tell you a story; the gentle, light movement of the hands and the beautiful shape they take at a certain moment.
-   The face and the skin are the main part in the artworks. Most of them are covered with all kinds of delicate and vibrant colors. In places, only a thin line of color is used to hint at the shape of the body and/or the garment. The blank, unfinished parts are provocation to the viewer and his imagination. The purpose of these unfinished sections is for the painting to come to life in the mind of the person who looks at it, and he, himself, to finish and fill these empty spots.
-   The same thing I wanted to achieve with the absence of a background. Without time and context, I wanted to give the viewers the opportunity to create their own story with the artworks. Therefore, I used soft, pastel colors for the background, which do not engage the eye much and do not create a prerequisite for certain emotions.
+    description: [
+      `In this art project, I represent the human body in various bright colors.
+      My initial inspiration came from colors - clean and bright, intertwining with each other and creating a colorful, patterned swirl that tries to form a shape, an image or even an emotion.
+      I was determined to use this love of color to create my artworks.`,
 
-   `,
+      `I decided this project to be about the upper part of the human body. I wanted to portray the beautiful facial features, captivating eyes that can tell you a story; the gentle, light movement of the hands and the beautiful shape they take at a certain moment.`,
+
+      `The face and the skin are the main part in the artworks. Most of them are covered with all kinds of delicate and vibrant colors.
+      In places, only a thin line of color is used to hint at the shape of the body and/or the garment.
+      The blank, unfinished parts are provocation to the viewer and his imagination. The purpose of these unfinished sections is for the painting to come to life in the mind of the person who looks at it, and he, himself, to finish and fill these empty spots.`,
+
+      `The same thing I wanted to achieve with the absence of a background. Without time and context, I wanted to give the viewers the opportunity to create their own story with the artworks.
+      Therefore, I used soft, pastel colors for the background, which do not engage the eye much and do not create a prerequisite for certain emotions.`,
+    ],
 
     paintings: [
       {
@@ -145,8 +153,9 @@ export const collection: Collection[] = [
   {
     id: 2,
     title: "30x24",
-    description:
+    description: [
       "This collection contains different type of artworks - from landscapes and still lifes to abstract art and more. The thing that connects all this artworks is the size of the canvas - 30x24cm.",
+    ],
     paintings: [
       {
         id: 1,
@@ -193,7 +202,7 @@ export const collection: Collection[] = [
   {
     id: 3,
     title: "Other",
-    description: `Here, you can find single artworks of various types.`,
+    description: [`Here, you can find single artworks of various types.`],
     paintings: [
       {
         id: 1,
@@ -218,9 +227,11 @@ export const collection: Collection[] = [
   {
     id: 4,
     title: "Portfolio",
-    description: `This is a small part of my artworks and orders I have done through the years. Here, you can see different types of art, different techniques on different surfaces.
+    description: [
+      `This is a small part of my artworks and orders I have done through the years. Here, you can see different types of art, different techniques on different surfaces.
    *they are not for sale.
 `,
+    ],
     paintings: [
       {
         id: 1,
