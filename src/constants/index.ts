@@ -62,7 +62,7 @@ export const collections: Collections[] = [
   },
   {
     id: 2,
-    title: "30x24",
+    title: "Harmonies of Creation",
     description: `Landscaped, still lifes, abstracts and more. A collection that at first sight has nothing in common, except for one thing - the size of the canvas`,
     image: David,
   },
@@ -152,9 +152,14 @@ export const collection: Collection[] = [
   },
   {
     id: 2,
-    title: "30x24",
+    title: "Harmonies of Creation",
     description: [
-      "This collection contains different type of artworks - from landscapes and still lifes to abstract art and more. The thing that connects all this artworks is the size of the canvas - 30x24cm.",
+      `Step into a world of boundless imagination and creativity with the mesmerizing art collection titled "Harmonies of Creation." This captivating collection brings together a diverse array of artworks that transcend boundaries and ignite the senses. As you explore each masterpiece, you'll embark on a journey that celebrates the limitless expressions of human ingenuity.`,
+
+      ` From vibrant canvases that burst with color to sculptures that invite touch and contemplation, "Harmonies of Creation" offers an immersive experience that speaks to the heart of artistic exploration. This collection showcases the remarkable diversity of mediums, styles, and techniques that artists wield to communicate their visions, all in the same size - 30x24cm.`,
+
+      `Each piece carries a unique voice, a testament to the artists' ability to channel emotions, thoughts and experiences onto their chosen canvas.
+      In the future, im dedicated to keep creating artworks for this collection that will continue to inspire, provoke, and ignite the imagination.`,
     ],
     paintings: [
       {
@@ -202,7 +207,9 @@ export const collection: Collection[] = [
   {
     id: 3,
     title: "Other",
-    description: [`Here, you can find single artworks of various types.`],
+    description: [
+      `This collection invites you on a captivating journey through an eclectic assembly of paintings, each a distinct universe of emotions, stories, and inspirations. In this gallery, there are no predetermined themes to constrain my visions - instead, you'll discover a rich tapestry of diverse styles, subjects, and techniques that stand independently yet collectively represent the kaleidoscope of human creativity.`,
+    ],
     paintings: [
       {
         id: 1,
@@ -228,9 +235,9 @@ export const collection: Collection[] = [
     id: 4,
     title: "Portfolio",
     description: [
-      `This is a small part of my artworks and orders I have done through the years. Here, you can see different types of art, different techniques on different surfaces.
-   *they are not for sale.
+      `Welcome to a captivating journey through the diverse and mesmerizing world of my life as an artist. This art portfolio is a symphony of individual expressions, where each painting stands as a testament to the artist's unique vision, style, and inspiration. As you go through this portfolio, you'll be transported to a realm where artistic exploration knows no boundaries, you'll encounter a myriad of emotions, colors, and moods that resonate with the human experience
 `,
+      `My portfolio is a testament to my artistic journey—a journey marked by evolution, experimentation, and an unwavering commitment to authentic expression. An exploration of the ever-shifting landscape of creativity, where each canvas unveils a different facet of my artistic journey. From bold abstract compositions that challenge the limits of perception to serene landscapes that capture the essence of tranquility.`,
     ],
     paintings: [
       {

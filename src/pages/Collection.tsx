@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import classes from "./Collection.module.css";
 import { collection } from "../constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DescriptionParagraph from "../components/DescriptionParagraph";
 import Button from "../components/Button";
 
@@ -12,15 +12,24 @@ type CollectionParam = {
 
 const Collection = (): JSX.Element => {
   const { title } = useParams<CollectionParam>();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const selectedItem = collection.find((item) => item.title === title)!;
-  const isNonFinito = title === "Non Finito";
-  const textFormat = !isNonFinito ? classes.center__text : classes.normal__text;
+
+  // Rendering text styles based on the length of the textt
+  const longerText = selectedItem.description.some(
+    (paragraph) => paragraph.length > 200
+  );
+  const textFormat = longerText ? classes.normal__text : classes.center__text;
 
   const handleClick = () => {
     setIsExpanded((prev) => !prev);
   };
+
+  // Resetting state after navigating away from the current path effectivly hiding the Read less button when it's not needed
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [title]);
 
   return (
     <>
@@ -42,10 +51,9 @@ const Collection = (): JSX.Element => {
 
           {/* Checks if paragraph is longer then 200 characters and adds a button */}
 
-          {selectedItem.description.some(
-            (paragraph) => paragraph.length > 200
-          ) &&
-            !isExpanded && <Button onClick={handleClick}>Read More</Button>}
+          {longerText && !isExpanded && (
+            <Button onClick={handleClick}>Read More</Button>
+          )}
 
           {/* Carousel */}
           <div className={classes.carousel__wrapper}>

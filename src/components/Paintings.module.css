@@ -40,3 +40,33 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Media Queries */
+
+/* Typical Mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .card__container img {
+    height: 350px;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  .info__container h2 {
+    margin: 0;
+  }
+}
+
+/* Mobile Landscape */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .card__container img {
+    height: 13rem;
+  }
+  .info__container {
+    width: 50%;
+  }
+  .info__container h2 {
+    margin: 0;
+  }
+}

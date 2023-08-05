@@ -8,22 +8,24 @@ const About = () => {
         <hr />
         <p>
           I’m Elena and I’m an artist based in Plovdiv, Bulgaria, who has been
-          honing in art for more than 10 years now.
+          honing in art for more than 10 years now. Still finding my type of
+          art, I enjoy experiencing with colors, techniques and styles, so I can
+          improve with every artwork.
         </p>
         <p>
-          Still finding my type of art, I enjoy experiencing with colors,
-          techniques and styles, so I can improve with every artwork.
+          My art is an assembly of emotions, each stroke capturing a moment of
+          introspection, a burst of joy, or a whisper of nostalgia. My mastery
+          lies not only in my technical prowess but also in my ability to
+          breathe life into my creations, inviting viewers to immerse themselves
+          in a realm of both beauty and vulnerability.
         </p>
         <p>
-          Colorful, vibrant portraits, picturesque landscapes and abstract works
-          are all brought to life with contrasting and harmonious colors and
-          bold compositions.
-        </p>
-        <p>I work mostly with acrylic paint on different sized canvases.</p>
-        <p>I work part-time as an artist in a gallery and as an art teacher.</p>
-        <p>
-          I teach 16-18-year-olds and I help them foster the same enthusiasm in
-          art that I have.
+          My passion radiates through my pieces, each canvas telling a story,
+          sharing a piece of my soul. My art is an invitation to connect, to
+          delve into the layers of colors and textures and find a mirror to
+          one's own emotions. With every stroke, I captures the essence of what
+          it means to be human—a blend of light and shadow, joy and sorrow, and
+          the infinite shades in between.
         </p>
       </div>
     </div>

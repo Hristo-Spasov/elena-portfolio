@@ -64,6 +64,7 @@
 
   .content__container hr {
     width: 30px;
+    margin: 0 0 20px 0;
   }
 
   .normal__text,
@@ -71,8 +72,8 @@
     font-size: 18px;
   }
 
-  .normal__text {
-    margin: 10px 0 0 0;
+  .normal__text p {
+    margin-top: 0;
   }
 }
 
@@ -86,6 +87,7 @@
   .content__container hr {
     width: 30px;
     padding: 0;
+    margin: 0 0 20px 0;
   }
 
   .normal__text,
@@ -93,17 +95,33 @@
     font-size: 1.1rem;
   }
 
-  .normal__text {
-    margin: 10px 0 0 0;
+  .normal__text p {
+    margin-top: 0;
   }
 }
 
 /* Mobile Landscape */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-}
+  .content__container h2 {
+    font-size: 40px;
+  }
 
-/* Small desktop */
+  .content__container hr {
+    width: 30px;
+    margin: 0 0 20px 0;
+  }
 
-@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .normal__text,
+  .center__text {
+    font-size: 18px;
+  }
+
+  .normal__text p {
+    margin-top: 0;
+  }
+
+  .carousel__wrapper {
+    width: 30rem;
+  }
 }
