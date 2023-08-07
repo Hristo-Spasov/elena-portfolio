@@ -48,9 +48,9 @@ const Card = ({
     <div className={classes.collections__container}>
       <div className={classes.card_container}>
         {/* Render image on the left */}
-        {isEven && <img src={image} alt={title} />}
+        {isEven && <img src={image} alt={title} loading="lazy" />}
         {/* Rendering img based on the width size */}
-        {isMobile && !isEven && <img src={image} alt={title} />}
+        {isMobile && !isEven && <img src={image} alt={title} loading="lazy" />}
         {/* Main component */}
         <div className={collectionWrapper}>
           <div className={collectionInformation}>
@@ -66,7 +66,7 @@ const Card = ({
         </div>
 
         {/* Render image on the right */}
-        {!isMobile && !isEven && <img src={image} alt={title} />}
+        {!isMobile && !isEven && <img src={image} alt={title} loading="lazy" />}
       </div>
     </div>
   );

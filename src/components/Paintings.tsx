@@ -10,7 +10,7 @@ const Paintings = ({ title, image, size }: PaintingsProps): JSX.Element => {
   return (
     <div className={classes.card__wrapper}>
       <div className={classes.card__container}>
-        <img src={image} alt={title} />
+        <img src={image} alt={title} loading="lazy" />
         <div className={classes.info__container}>
           {title && <h2 className={classes.card__title}>{title}</h2>}
           {size && <p className={classes.size}>{size}</p>}

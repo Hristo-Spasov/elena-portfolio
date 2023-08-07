@@ -4,12 +4,14 @@ import Contacts from "../components/Contacts";
 
 const Root = () => {
   return (
-    <main id="home">
-      <ScrollRestoration />
-      <Navbar />
-      <Outlet />
-      <Contacts />
-    </main>
+    <>
+      <main id="home">
+        <ScrollRestoration />
+        <Navbar />
+        <Outlet />
+        <Contacts />
+      </main>
+    </>
   );
 };
 

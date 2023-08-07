@@ -40,7 +40,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className={classes.logo_container}>
             {pathname === "/" ? (
-              <Link to="/" smooth={true} duration={300} offset={0} spy={true}>
+              <Link
+                to="home"
+                smooth={true}
+                duration={300}
+                offset={0}
+                spy={true}
+              >
                 <img className={classes.logo} src={logo} />
               </Link>
             ) : (
