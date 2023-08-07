@@ -20,7 +20,7 @@ const Carousel = ({ onSelectedItem }: CarouselProps): JSX.Element => {
     focusOnSelect: true,
     arrows: false,
     draggable: true,
-    lazyLoad: "ondemand" as LazyLoadTypes,
+    lazyLoad: "progressive" as LazyLoadTypes,
     responsive: [
       {
         breakpoint: 1024,
