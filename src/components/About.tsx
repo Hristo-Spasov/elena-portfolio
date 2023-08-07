@@ -7,7 +7,7 @@ const About = () => {
         <h3>I was created to create.</h3>
         <hr />
         <p>
-          I’m Elena and I’m an artist based in Plovdiv, Bulgaria, who has been
+          I'm Elena and I'm an artist based in Plovdiv, Bulgaria, who has been
           honing in art for more than 10 years now. Still finding my type of
           art, I enjoy experiencing with colors, techniques and styles, so I can
           improve with every artwork.

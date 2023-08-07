@@ -7,7 +7,7 @@ const Home = (): JSX.Element => {
   return (
     <div className={classes.home} id="home">
       <section className={classes.hero}>
-        <img src={hero} alt="hero image" loading="lazy" />
+        <img src={hero} alt="hero image" loading="eager" />
         <h2>ELLENA</h2>
       </section>
       <section className={classes.about__wrapper}>
