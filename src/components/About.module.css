@@ -61,6 +61,7 @@
 
   .about_me hr {
     margin: 0 0 30px 0;
+    width: 10%;
   }
 
   .about_me p {
@@ -80,6 +81,10 @@
 
   .about_me h3 {
     font-size: 40px;
+  }
+
+  .about_me hr {
+    width: 10%;
   }
 
   .about_me p {

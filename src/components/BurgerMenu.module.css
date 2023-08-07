@@ -27,7 +27,7 @@
 .burger_dropdown a {
   display: block;
   color: var(--teal);
-  padding: 8px 0;
+  padding: 16px 0;
 }
 
 .burger_dropdown li:hover {

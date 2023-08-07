@@ -37,6 +37,10 @@
   font-family: "Antic", sans-serif;
 }
 
+.normal__text p {
+  margin-bottom: 0;
+}
+
 .carousel__wrapper {
   width: 100%;
   border: 1px solid var(--teal);
@@ -73,7 +77,7 @@
   }
 
   .normal__text p {
-    margin-top: 0;
+    margin-top: 12px;
   }
 }
 
@@ -96,7 +100,7 @@
   }
 
   .normal__text p {
-    margin-top: 0;
+    margin-top: 12px;
   }
 }
 
