@@ -47,11 +47,11 @@ const Navbar = () => {
                 offset={0}
                 spy={true}
               >
-                <img className={classes.logo} src={logo} />
+                <img className={classes.logo} src={logo} alt="logo" />
               </Link>
             ) : (
               <NavLink to="/">
-                <img className={classes.logo} src={logo} />
+                <img className={classes.logo} src={logo} alt="logo" />
               </NavLink>
             )}
           </div>
