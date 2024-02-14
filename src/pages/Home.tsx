@@ -8,7 +8,7 @@ const Home = (): JSX.Element => {
     <div className={classes.home} id="home">
       <section className={classes.hero}>
         <img src={hero} alt="hero image" loading="eager" />
-        <h1>ELLENA</h1>
+        <h1 className={classes.title}>ELLENA</h1>
       </section>
       <section className={classes.about__wrapper}>
         <About />

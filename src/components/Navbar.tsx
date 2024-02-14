@@ -38,7 +38,7 @@ const Navbar = () => {
       >
         <ul className={classes.nav_list}>
           {/* Logo */}
-          <div className={classes.logo_container}>
+          <li className={classes.logo_container}>
             {pathname === "/" ? (
               <Link
                 to="home"
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <img className={classes.logo} src={logo} alt="logo" />
               </NavLink>
             )}
-          </div>
+          </li>
 
           {/* Main nav */}
           <div

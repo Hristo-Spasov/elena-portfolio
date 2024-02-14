@@ -83,6 +83,13 @@
     height: 92vh;
   }
 
+  .title {
+    font-size: 70px !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-15%, -50%);
+  }
+
   .hero h2 {
     font-size: 32px;
     left: 10%;
@@ -106,9 +113,17 @@
   .hero {
     height: 75vh;
   }
+
+  .title {
+    font-size: 70px !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-15%, -50%);
+  }
   .hero h2 {
     font-size: 42px;
   }
+
   .hero img {
     min-width: 50%;
     object-fit: contain;
