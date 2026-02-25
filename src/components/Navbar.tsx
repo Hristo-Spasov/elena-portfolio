@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import classes from "./Navbar.module.css";
 import logo from "../assets/logo.svg";
 import Dropdown from "./Dropdown";
-import { ReactComponent as ArrowDown } from "../assets/arrow-down.svg";
+import  ArrowDown  from "../assets/arrow-down.svg?react";
 import BurgerMenu from "./BurgerMenu";
 
 const Navbar = () => {
