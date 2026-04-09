@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
-const Button = ({ children, ...otherProps }: ButtonProps): JSX.Element => {
+const Button = ({ children, ...otherProps }: ButtonProps) => {
   return (
     <button type="button" className={classes.base_button} {...otherProps}>
       {children}

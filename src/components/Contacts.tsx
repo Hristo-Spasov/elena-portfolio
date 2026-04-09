@@ -3,9 +3,10 @@ import { useLocation } from "react-router-dom";
 import classes from "./Contacts.module.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+// import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import MailOutlineIcon from '@mui/icons-material/MailOutlineOutlined';
 
-const Contacts = (): JSX.Element => {
+const Contacts = () => {
   const { pathname } = useLocation();
   const isHomePage = pathname === "/";
 

@@ -6,7 +6,7 @@ type PaintingsProps = {
   size?: string;
 };
 
-const Paintings = ({ title, image, size }: PaintingsProps): JSX.Element => {
+const Paintings = ({ title, image, size }: PaintingsProps) => {
   return (
     <div className={classes.card__wrapper}>
       <div className={classes.card__container}>

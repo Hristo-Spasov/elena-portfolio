@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import classes from "./Collection.module.css";
 import { collection } from "../constants";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DescriptionParagraph from "../components/DescriptionParagraph";
 import Button from "../components/Button";
 
@@ -10,11 +10,15 @@ type CollectionParam = {
   title: string;
 };
 
-const Collection = (): JSX.Element => {
+const Collection = () => {
   const { title } = useParams<CollectionParam>();
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-  const selectedItem = collection.find((item) => item.title === title)!;
+  const selectedItem = collection.find((item) => item.title === title);
+
+  if (!selectedItem) {
+    return <div>Collection not found</div>;
+  }
 
   // Rendering text styles based on the length of the textt
   const longerText = selectedItem.description.some(
@@ -26,14 +30,11 @@ const Collection = (): JSX.Element => {
     setIsExpanded((prev) => !prev);
   };
 
-  // Resetting state after navigating away from the current path effectivly hiding the Read less button when it's not needed
-  useEffect(() => {
-    setIsExpanded(false);
-  }, [title]);
+  
 
   return (
     <>
-      <section key={selectedItem.id} className={classes.section__wrapper}>
+      <section key={title} className={classes.section__wrapper}>
         <div className={classes.content__container}>
           <h2>{selectedItem.title}</h2>
           <hr />

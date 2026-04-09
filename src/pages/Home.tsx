@@ -3,7 +3,7 @@ import hero from "../assets/hero-min.webp";
 import About from "../components/About";
 import Collections from "../components/Collections";
 
-const Home = (): JSX.Element => {
+const Home = () => {
   return (
     <div className={classes.home} id="home">
       <section className={classes.hero}>

@@ -6,7 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import classes from "./BurgerMenu.module.css";
 import { ClickAwayListener } from "@mui/material";
 
-const BurgerMenu = (): JSX.Element => {
+const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleHandler = () => {

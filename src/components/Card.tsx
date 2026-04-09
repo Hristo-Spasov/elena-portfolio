@@ -14,7 +14,7 @@ const Card = ({
   isEven,
   description,
   image,
-}: CardProps): JSX.Element => {
+}: CardProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   //  handle the breakpoint to render img

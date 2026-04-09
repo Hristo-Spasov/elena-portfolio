@@ -2,7 +2,7 @@ import Card from "./Card";
 import classes from "./Collections.module.css";
 import { collections } from "../constants";
 
-const Collections = (): JSX.Element => {
+const Collections = () => {
   return (
     <section className={classes.collection_container}>
       <div className={classes.card__wrapper}>
